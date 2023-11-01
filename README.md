@@ -68,7 +68,7 @@ STAR \
 
 The STAR command uses 4 cpus so make sure your job has enough allocated. The `--sjdbOverhang` option should be set to `readlength - 1`.
 
-### Mapping round 1
+### Mapping (round 1)
 
 Then STAR is run to map the fastq files for each sample individually. Fastq files are supplied using the `--readFilesIn` option, with read1 file(s), a space and then read2 file(s).  
 If a sample has multiple fastq files these can be supplied as a comma-separated list of files.  
@@ -93,7 +93,7 @@ STAR \
 --outSAMtype BAM SortedByCoordinate
 ```
 
-### Mapping round 2
+### Mapping (round 2)
 
 STAR outputs a file of discovered splice junctions that aren't in the supplied annotation. Then we run STAR again and include those files with the `--sjdbFileChrStartEnd` option
 
